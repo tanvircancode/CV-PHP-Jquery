@@ -1,0 +1,325 @@
+<?php
+
+include('config.php');
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>CV</title>
+ 
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+  <div id="main">
+    <form id="addForm" action="">
+      <div class="intro">
+        <div class="intro_desc">
+          <input type="text" id="full_name" name="full_name" placeholder="Your Name" required /> </br>
+          <input type="text" id="address" name="address" placeholder="Address" required /></br>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="+880 .."
+            required /></br>
+          <input type="email" id="email" name="email" placeholder="abc@gmail.com" required /></br>
+
+          
+        </div>
+      </div>
+      <div class="career">
+        <p class="objective-para">Career Objective</p>
+        <textarea rows="6" cols="100" class="textarea-obj" name="objective" id="textarea-input"></textarea>
+      </div>
+      </br>
+      <div id="exp-dropdown">
+        <span class="p-exp-duration">Number of Experience:</span>
+        <select id="number-of-exp">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+      <div id="experience-one" style="display: none;">
+        <p class="experi">Experience</p>
+        <input type="text" id="designation-one" name="designation-one" placeholder="Your Designation" /></br>
+        <input type="text" id="company-name-one" name="company-name-one" placeholder="company name and Place" /></br>
+        <span class="p-exp-duration">Duration(in years):</span>
+        <select name="exp-duration-one" id="exp-duration-one">
+          <option>0</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </div>
+      <div id="experience-two" style="display: none;">
+        <p class="experi">Experience</p>
+        <input type="text" id="designation-two" name="designation-two" placeholder="Your Designation" /></br>
+        <input type="text" id="company-name-two" name="company-name-two" placeholder="company name and Place" /></br>
+        <span class="p-exp-duration">Duration(in years):</span>
+        <select name="exp-duration-two" id="exp-duration-two">
+          <option>0</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </div>
+      <p class="academic">Academic Qualifications</p>
+      <div class="academic">
+        <div class="uni">
+          <p class="academic-uni">University</p>
+
+          <input type="text" id="uni-degree" name="uni-degree" placeholder="University Degree" /></br>
+          <input type="text" id="uni-name" name="uni-name" placeholder="university Name: ex-SUST" /></br>
+          <input type="text" id="uni-cgpa" name="uni-cgpa" placeholder="CGPA: 3.50" /></br>
+          <span class="p-exp-duration">Passing year:</span>
+          <select name="uni-pass-year" id="uni-pass-year">
+            <option>2015</option>
+            <option>2016</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+            <option>2021</option>
+          </select>
+
+        </div>
+        <div class="hsc">
+          <p class="academic-hsc">HSC</p>
+          <input type="text" id="coll-name" name="coll-name" placeholder="College Name: ex-MC" /></br>
+          <input type="text" id="coll-cgpa" name="coll-cgpa" placeholder="GPA: 3.50" /></br>
+          <span class="p-exp-duration">Passing year:</span>
+          <select name="coll-pass-year" id="coll-pass-year">
+            <option>2015</option>
+            <option>2016</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+            <option>2021</option>
+          </select>
+
+        </div>
+        <div class="ssc">
+          <p class="academic-ssc">SSC</p>
+          <input type="text" id="skl-name" name="skl-name" placeholder="School Name" /></br>
+          <input type="text" id="skl-cgpa" name="skl-cgpa" placeholder="GPA: 3.50" /></br>
+          <span class="p-exp-duration">Passing year:</span>
+          <select name="skl-pass-year" id="skl-pass-year">
+            <option>2015</option>
+            <option>2016</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+            <option>2021</option>
+          </select>
+
+        </div>
+      </div>
+      <p class="project-para">Projects</p>
+      <div class="projects">
+        <p>Project One : </p>
+        <input type="text" id="project-one-name" name="project-one-name" placeholder="Project Title" /></br>
+        <textarea rows="3" cols="100" class="project-one-textarea" name="project-one-textarea" id="project-one-textarea"
+          placeholder="Project Description"></textarea></br>
+        <span class="project-one-span">Year:</span>
+        <select name="project-one" id="project-one">
+          <option>2015</option>
+          <option>2016</option>
+          <option>2017</option>
+          <option>2018</option>
+          <option>2019</option>
+          <option>2020</option>
+          <option>2021</option>
+        </select></br>
+        <input type="text" id="project-one-link" name="project-one-link" placeholder="Project Link" /></br>
+      </div>
+      <div class="projects">
+        <p>Project Two : </p>
+
+        <input type="text" id="project-two-name" name="project-two-name" placeholder="Project Title" /></br>
+        <textarea rows="3" cols="100" class="project-two-textarea" name="project-two-textarea" id="project-two-textarea"
+          placeholder="Project Description"></textarea></br>
+        <span class="project-two-span">Year:</span>
+        <select name="project-two" id="project-two">
+          <option>2015</option>
+          <option>2016</option>
+          <option>2017</option>
+          <option>2018</option>
+          <option>2019</option>
+          <option>2020</option>
+          <option>2021</option>
+        </select></br>
+        <input type="text" id="project-two-link" name="project-two-link" placeholder="Project Link" /></br>
+      </div>
+      <div class="projects">
+        <p>Project Three : </p>
+
+        <input type="text" id="project-three-name" name="project-three-name" placeholder="Project Title" /></br>
+        <textarea rows="3" cols="100" class="project-three-textarea" name="project-three-textarea"
+          id="project-three-textarea" placeholder="Project Description"></textarea> </br>
+        <span class="project-three-span">Year:</span>
+        <select name="project-three" id="project-three">
+          
+          <option>2015</option>
+          <option>2016</option>
+          <option>2017</option>
+          <option>2018</option>
+          <option>2019</option>
+          <option>2020</option>
+          <option>2021</option>
+        </select></br>
+        <input type="text" id="project-three-link" name="project-three-link" placeholder="Project Link" /></br>
+      </div>
+      <div class="projects">
+        <p>Project Four : </p>
+
+        <input type="text" id="project-four-name" name="project-four-name" placeholder="Project Title" /></br>
+        <textarea rows="3" cols="100" class="project-four-textarea" name="project-four-textarea"
+          id="project-four-textarea" placeholder="Project Description"></textarea></br>
+        <span class="project-four-span">Year:</span>
+        <select name="project-four" id="project-four">
+          <option>2015</option>
+          <option>2016</option>
+          <option>2017</option>
+          <option>2018</option>
+          <option>2019</option>
+          <option>2020</option>
+          <option>2021</option>
+        </select></br>
+        <input type="text" id="project-four-link" name="project-four-link" placeholder="Project Link" /></br>
+      </div>
+
+      <div class="skills">
+        <p>Skills : </p>
+        <textarea rows="3" cols="100" class="skills-textarea" name="skills-textarea" id="skills-textarea"></textarea>
+      </div>
+      <input type="submit" id="save-button" value="Save" />
+
+
+
+    </form>
+
+    <div id="error-message" class="messages"></div>
+    <div id="success-message" class="messages"></div>
+  </div>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+
+      $('#exp-dropdown').on('change', function () {
+        var exp_val = $('#number-of-exp option:selected').text();
+
+        if (exp_val === '1') {
+          console.log($('#number-of-exp option:selected').text());
+
+          $("#experience-one").show();
+          $("#experience-two").hide();
+
+        } else if (exp_val === '2') {
+          console.log($('#number-of-exp option:selected').text());
+          $("#experience-one").show();
+          $("#experience-two").show();
+        }
+        else if (exp_val === '0') {
+          console.log($('#number-of-exp option:selected').text());
+          $("#experience-one").hide();
+          $("#experience-two").hide();
+        }
+
+      });
+      // error or success msg
+      function message(message, status) {
+        if (status) {
+          $("#success-message").html(message).slideDown();
+          $("#error-message").slideUp();
+          setTimeout(function () {
+            $("#success-message").slideUp();
+          }, 4000);
+        } else {
+          $("#error-message").html(message).slideDown();
+          $("#success-message").slideUp();
+          setTimeout(function () {
+            $("#error-message").slideUp();
+          }, 4000);
+        }
+      }
+
+
+
+
+      function jsonData(targetForm) {
+        var arr = $(targetForm).serializeArray();
+        // console.log(arr);
+
+        var obj = {};
+        for (var a = 0; a < arr.length; a++) {
+          console.log(arr[a].value);
+
+          obj[arr[a].name] = arr[a].value;
+        }
+
+        var json_string = JSON.stringify(obj);
+        // console.log('dasaaaaaaaaa');
+        // console.log(json_string);
+
+        return json_string;
+      }
+
+      // insert record
+      $("#save-button").on("click", function (e) {
+        e.preventDefault();
+
+        $name_chk = $("#full_name").val();
+        $address_chk = $("address").val();
+        $phone_chk = $("#phone").val();
+        $email_chk = $("#email").val();
+
+        if($name_chk === '' || $address_chk === '' || $phone_chk === '' ||  $email_chk === ''){
+          alert('You have to Fill Name, Address, phone and Email');
+          window.location = 'index.html';
+        }
+        
+
+        var jsonObj = jsonData("#addForm");
+        console.log(jsonObj);
+
+
+
+        $.ajax({
+
+          url: "http://localhost/cv/api-insert.php",
+          type: "POST",
+          data: jsonObj,
+          success: function (data) {
+            message(data.message, data.status, data.id);
+            if (data.status) {
+              console.log(data.id);
+              // loadTable();
+              $("#addForm").trigger("reset");
+            }
+            window.location = 'final.php?id=' + data.id;
+          },
+        });
+
+      });
+
+
+
+
+
+
+
+    });
+  </script>
+</body>
+
+</html>
